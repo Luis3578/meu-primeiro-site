@@ -114,6 +114,12 @@ main h2{
     font-family: var(--font-imoportada);
 }
 
+.imagem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 strong{
     color: var(--cor04);
     font-weight: bold;

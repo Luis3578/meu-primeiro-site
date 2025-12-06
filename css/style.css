@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+/* ==========================
+   FONTES
+========================== */
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
 @font-face {
@@ -7,193 +10,200 @@
     src: url('../fontes/idroid.otf') format('opentype');
 }
 
-*{
-    margin: 0px;
-    padding: 0px;  
+/* ==========================
+   RESET
+========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* ==========================
+   VARIÁVEIS
+========================== */
+:root {
+    --cor00: #c5ebdc;
+    --cor01: #83e1ad;
+    --cor02: #3ddc84;
+    --cor03: #2fa866;
+    --cor04: #1a5c37;
+    --cor05: #063d1e;
 
-:root{
-    --cor00:#c5ebdc;
-    --cor01:#83e1ad;
-    --cor02:#3ddc84;
-    --cor03:#2fa866;
-    --cor04:#1a5c37;
-    --cor05:#063d1e;
-
-    --font-imoportada: 'droid', 'cursive';
+    --font-importada: 'droid', cursive;
     --font-padrao: "Oswald", sans-serif;
-    --font-comum: arial, verdana, sans-serif;
+    --font-comum: Arial, Verdana, sans-serif;
 }
 
-body{
+/* ==========================
+   BODY
+========================== */
+body {
     background-color: var(--cor00);
     font-family: var(--font-comum);
 }
 
-header{
+/* ==========================
+   HEADER
+========================== */
+header {
     background-image: linear-gradient(to top, var(--cor05), var(--cor02));
     min-height: 150px;
     text-align: center;
-    padding-top: 30px;  
+    padding: 30px 10px;
 }
 
-header h1{
+header h1 {
     color: white;
     font-size: 3em;
-    font-weight: bold;
     font-family: var(--font-padrao);
 }
 
-header p{
+header p {
     color: white;
-    padding-top: 20px;
+    padding-top: 15px;
     font-size: 1.2em;
-    font-family: var(--font-padrao);
-    min-width: 350px;
 }
 
-nav{
+/* ==========================
+   MENU
+========================== */
+nav {
     background-color: var(--cor05);
-    padding-bottom: 5px;
-    padding-left: 5px;
+    padding: 8px;
+    text-align: center;
 }
 
-nav a{
+nav a {
     color: white;
     font-weight: bold;
     text-decoration: none;
-    padding: 20px;
-    padding-bottom: 5px;
-    padding-top: 5px;
+    padding: 10px 20px;
     font-size: 1.1em;
-    font-family: var(--font-padrao);
+    display: inline-block;
 }
 
-nav a:hover{
+nav a:hover {
     background-color: var(--cor01);
-    color: var(--cor04);
+    color: var(--cor05);
     border-radius: 4px;
-    transition-duration: .5s;
+    transition: 0.3s;
 }
 
-main{
-    background-color: white;
-    min-width: 350px;
+/* ==========================
+   MAIN
+========================== */
+main {
+    background: white;
     max-width: 1000px;
-    margin: auto;
-    margin-bottom: 20px;
-    border-radius: 0px 0px 10px 10px;
+    margin: 20px auto;
+    padding-bottom: 30px;
+    border-radius: 0 0 10px 10px;
 }
 
-main p{
-    font-family: var(--font-comum);
+main>h1 {
+    color: var(--cor04);
+    padding: 20px;
+    font-size: 1.8em;
+    font-family: var(--font-importada);
+}
+
+main h2 {
+    color: var(--cor04);
+    padding: 15px 20px;
+    font-family: var(--font-importada);
+    font-size: 1.4em;
+}
+
+main p {
+    margin: 10px 20px;
     text-align: justify;
-    margin-left: 20px;
     text-indent: 2em;
-    word-spacing: 5px; 
-    line-height: 1.7em;  
+    line-height: 1.7em;
 }
 
-main > h1{
-    color: var(--cor04);
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-left: 20px;
-    font-weight: bold;
-    font-family: var(--font-imoportada);
-    font-size: 1.7em;
-}
-
-main h2{
-    color: var(--cor04);
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-left: 20px;
-    font-weight: bold;
-    font-family: var(--font-imoportada);
-}
-
-.imagem{
+/* ==========================
+   IMAGENS
+========================== */
+.imagem {
     display: flex;
     justify-content: center;
-    align-items: center;
+    padding: 15px 0;
 }
 
-strong{
-    color: var(--cor04);
-    font-weight: bold;
+.imagem img {
+    width: 100%;
+    max-width: 600px;
 }
 
-.externo{
+/* ==========================
+   LINKS EXTERNOS
+========================== */
+.externo {
     background-color: var(--cor01);
     color: var(--cor04);
+    padding: 2px 5px;
+    border-radius: 3px;
     text-decoration: none;
     font-weight: bold;
-
 }
 
-.extra{
+/* ==========================
+   BOX EXTRA
+========================== */
+.extra {
     background-color: var(--cor00);
     border-radius: 10px;
     margin: 20px;
 }
 
-.extra ul{
-    list-style-position: inside;
-    columns: 2;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 10px;
-}
-
-.extra p{
-    margin-top: 10px;
-}
-
-.extra h1{
+.extra h1 {
     background-color: var(--cor03);
     color: white;
+    padding: 15px;
     font-family: var(--font-padrao);
-    font-size: 1.5em;
-    padding-left: 20px;
-    border-radius: 10px 10px 0px 0px;  
+    border-radius: 10px 10px 0 0;
 }
 
-footer{
+.extra p {
+    margin: 15px 20px;
+}
+
+.extra ul {
+    padding: 10px 20px;
+    columns: 2;
+    list-style-position: inside;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+footer {
     background-color: var(--cor05);
     color: white;
     text-align: center;
+    padding: 15px;
+    font-size: 0.9em;
 }
 
+/* ==========================
+   RESPONSIVIDADE
+========================== */
 
-
-/* RESPONSIVIDADE */
+/* Tablets e celulares médios */
 @media (max-width: 768px) {
+
     header h1 {
-        font-size: 2em;
+        font-size: 2.4em;
     }
 
     header p {
-        font-size: 1em;
-        min-width: auto;
-        padding: 10px;
+        font-size: 1.1em;
     }
 
     nav a {
+        padding: 10px;
         display: block;
-        padding: 10px;
-        font-size: 1em;
-    }
-
-    main {
-        margin: 10px;
-        padding: 10px;
-    }
-
-    main > h1, main h2 {
-        margin-left: 0;
-        text-align: center;
     }
 
     .extra ul {
@@ -201,23 +211,28 @@ footer{
     }
 }
 
+/* Celulares pequenos */
 @media (max-width: 480px) {
+
     header h1 {
-        font-size: 1.5em;
+        font-size: 1.8em;
     }
 
     header p {
-        font-size: 0.9em;
+        font-size: 1em;
     }
 
-    nav a {
-        font-size: 0.9em;
-        padding: 8px;
+    main {
+        margin: 10px;
     }
 
     main p {
-        margin-left: 0;
-        text-indent: 1em;
+        text-indent: 1.2em;
+        margin: 10px;
+    }
+
+    nav a {
         font-size: 0.95em;
+        padding: 8px;
     }
 }
